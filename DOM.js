@@ -97,9 +97,31 @@ function interaccion(e){
         confirm("Esto es una confirmacion");
     }
     
-    let $objetivo= document.getElementById("objetivo");
+    var objetivo = document.getElementById("obj");
 
     if(e.keyCode===119){
-        console.log($objetivo.style.backgroundColor="red");
+        if(y!==0){
+            y= y-0.5;
+        }
+        objetivo.style.top= y+"rem";
     }
+    if(e.keyCode===115){
+        if(y!==25.5){
+            y= y+0.5;
+        }
+        objetivo.style.top= y+"rem";
+    }
+    if(e.keyCode===100){
+        if(x!==85.5){
+            x= x+0.5;
+        }
+        objetivo.style.left= x+"rem";
+    }
+    if(e.keyCode===97){
+        if(x!==0){
+            x= x-0.5;
+        }
+        objetivo.style.left= x+"rem";
+    }
+
 }
