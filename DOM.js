@@ -1,8 +1,22 @@
 let contador=0;
 let tt=0;
+let bb=0;
+let cc=0;
 let x=43; //de 0 a 28
 let y=13; // de 0 a 88
 
+
+document.addEventListener("scroll" ,pp=>{
+    let scroll = document.documentElement.scrollTop;
+    console.log(scroll);
+    let ele= document.getElementById("bot");
+    if(scroll<200){
+        ele.setAttribute("class", "boton subir hidden");
+    }
+    else{
+        ele.setAttribute("class", "boton subir");
+    }
+})
 document.addEventListener("keypress", e=>{
     interaccion(e);
 });
@@ -17,7 +31,6 @@ function cambio(){
         contador=0;
     }
 }
-let bb=0;
 function reloj(){
     var temporisador=setInterval(()=>{
         const date = new Date();
@@ -64,12 +77,10 @@ function reloj(){
         }
     },1000);
 }
-
 function freno(){
     tt=1;
     
 }
-
 function alarma(){
     var tempo=setInterval(()=>{
         let alarma = document.getElementById("alarma");
@@ -83,10 +94,7 @@ function alarma(){
 function detener(){
     aa=1;
 }
-
 function interaccion(e){
-    console.log(e.keyCode);
-    console.log(e.shiftKey);
     if(e.keyCode===65 && e.shiftKey){
         alert("Esto es una alerta");
     }
@@ -124,4 +132,23 @@ function interaccion(e){
         objetivo.style.left= x+"rem";
     }
 
+}
+function subir(){
+    document.documentElement.scrollTop=0;
+}
+function oscuro(){
+    if(cc===0){
+        let cuerpo= document.getElementById("cuerpo");
+        cuerpo.setAttribute("class", "nocturno");
+        cc++;
+        let bot= document.getElementById("noche");
+        bot.textContent="🌞";
+    }
+    else{
+        let cuerpo= document.getElementById("cuerpo");
+        cuerpo.setAttribute("class", "dia");
+        cc=0;
+        let bot= document.getElementById("noche");
+        bot.textContent="🌙";
+    }
 }

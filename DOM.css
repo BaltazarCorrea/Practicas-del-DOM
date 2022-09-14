@@ -1,6 +1,23 @@
 /* seccion de elemento*/
-h2{
+button{
+    cursor:pointer;
+}
+h1{
+    font-size: 2.5;
+    position:absolute;
     text-align: center;
+    width:99.7vw;
+    height: 3rem;
+    background-color: yellow;
+    left:-1rem;
+    top:-1.5rem;
+    padding: 1rem 0;
+    border-bottom: 0.3rem solid black;
+}
+h2{
+    font-size: 2rem;
+    text-align: center;
+    -webkit-text-stroke: 0.03rem white;
 }
 html{
     scroll-behavior: smooth;
@@ -18,6 +35,11 @@ html{
     border: 0.25rem solid black;
     text-align: center;
     background-color: yellow;
+    z-index:9999;
+}
+.boton:hover{
+    background-color: black;
+    color: yellow;
 }
 .boton_reloj{
     text-align: center;
@@ -25,6 +47,9 @@ html{
 .cronometro{
     text-align: center;
     font-size: 2rem;
+}
+.dia{
+    transition: all 1s ease 0s;
 }
 .escondido{
     transition: all 1s ease 0s;
@@ -34,6 +59,10 @@ html{
     left:100%;
     height: 100%;
     width: 100%;
+}
+.hidden{
+    visibility: hidden;
+    opacity: 0;
 }
 .interno{
     color:grey;
@@ -65,7 +94,7 @@ html{
     padding: 0.5rem;
     height: 30rem;
     width: 90rem;
-    background-color: #242423;
+    background-color: #08235C;
 }
 .modal{
     transition: all 1s ease 0s;
@@ -76,6 +105,15 @@ html{
     height: 100%;
     width: 100%;
 }
+.noche{
+    position: fixed;
+    top: 91%;
+    left: 1rem;
+}
+.nocturno{
+    transition: all 1s ease 0s;
+    background-color: #1C1D1E;
+}
 .obj{
     height: 4rem;
     width: 4rem;
@@ -85,4 +123,10 @@ html{
     top:13rem;
     left:43rem;
     border: solid 0.25rem #737320;
+}
+.subir{
+    transition: all 1s ease 0s;
+    position:sticky;
+    top: 91%;
+    left: 91.5%;
 }

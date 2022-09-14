@@ -7,8 +7,11 @@
     <title>Ejercicios del DOM</title>
     <link rel="stylesheet" href="DOM.css">
 </head>
-<body>
+<body id="cuerpo">
+    <h1>Ejercicios de creacion del DOM</h1>
     <button class="boton" onclick="cambio()">≣</button>
+    <button class="boton subir hidden" onclick="subir()" id="bot">↥</button>
+    <button class="boton noche" onclick="oscuro()" id="noche">🌙</button>
     <div class="escondido" id="menu">
         <ul class="lista">
             <div class="item"><a class="interno" href="#reloj y alarma" onclick="cambio()">Reloj y alarma</a></div>
@@ -31,11 +34,12 @@
         </div>
     </section>
     <section id="evento de teclado">
-        <h2>Eventos del teclado</h2>
+        <h2>Desplazamiento por teclado</h2>
         <div class="mapa">
             <div class="obj" id="obj"></div>
         </div>
     </section>
+    
 
 
 
