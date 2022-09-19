@@ -13,6 +13,7 @@ h1{
     top:-1.5rem;
     padding: 1rem 0;
     border-bottom: 0.3rem solid black;
+    z-index: 100;
 }
 h2{
     font-size: 2rem;
@@ -24,6 +25,19 @@ html{
 }
 
 /* seccion alfabetica */
+.aviso{
+    transition: all 1s ease 0s;
+    font-size: 2.5rem;
+    position:absolute;
+    text-align: center;
+    width:99.7vw;
+    height: 2.7rem;
+    left:-1rem;
+    top:-2.5rem;
+    padding: 1rem 0;
+    border-bottom: 0.3rem solid black;
+    z-index: 90;
+}
 .boton{
     position:sticky;
     top: 91%;
@@ -60,6 +74,19 @@ html{
     height: 100%;
     width: 100%;
 }
+.form{
+    text-align: center;
+    margin: 0 auto;
+    background-color: #F3F355;
+    padding: 2rem;
+    width: 18rem;
+    border: 0.15rem solid black;
+    border-radius: 0.25rem;
+}
+.formulario{
+    margin:0.25rem;
+    width: 14rem;
+}
 .hidden{
     visibility: hidden;
     opacity: 0;
@@ -85,9 +112,17 @@ html{
     position:relative;
     left:-2.5rem;
 }
+.link{
+    text-align: center;
+    margin: auto 0;
+}
 .lista{
     text-align: center;
     margin: auto 0;
+}
+.map{
+    
+    z-index: 99;
 }
 .mapa{
     margin:0 auto;
@@ -95,6 +130,12 @@ html{
     height: 30rem;
     width: 90rem;
     background-color: #08235C;
+}
+.maps{
+    width: 38rem;
+    margin: 0 auto;
+    text-align: center;
+    border:0.25rem solid black;
 }
 .modal{
     transition: all 1s ease 0s;
@@ -124,9 +165,31 @@ html{
     left:43rem;
     border: solid 0.25rem #737320;
 }
+.offline{
+    transition: all 1s ease 0s;
+    background-color: red;
+}
+.online{
+    transition: all 1s ease 0s;
+    background-color: greenyellow;
+}
 .subir{
     transition: all 1s ease 0s;
     position:sticky;
     top: 91%;
     left: 91.5%;
+}
+.submit{
+    width: 7rem;
+}
+.test{
+    font-size: 2rem;
+}
+.vid{
+    height: 19.58rem;
+    width: 35rem;
+    margin: 1rem auto;
+    padding:0;
+    text-align: center;
+    border:0.25rem solid black;
 }
