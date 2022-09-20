@@ -27,6 +27,7 @@ window.addEventListener("online", a=>{
 document.addEventListener("DOMContentLoaded", b=>{
     theme();
     comprobar();
+    gps();
 })
 document.addEventListener("scroll" ,pp=>{
     let scroll = document.documentElement.scrollTop;
@@ -238,4 +239,22 @@ function ventanas(){
         ff=0;
     }
 }
-console.log(navigator.onLine);
+function gps(){
+    const options={
+        enableHighAccuaracy:true,
+        timeout:5000,
+        maximumAge:0,
+    };
+    const success = (position)=>{
+        console.log(position.coords);
+        let coords=position.coords;
+        let etiqueta = document.getElementById("geolocacion");
+        etiqueta.insertAdjacentHTML("afterbegin", '<ul class="cordenadas"><div>Latitud: <b>'+coords.latitude+'</b></div><div>Longitud: <b>'+coords.longitude+'</b></div><div>Precicion: <b>'+Math.round(coords.accuracy)+' metros</b></div> <b><a class="cordenadas" href="https://www.google.com.ar/maps/@'+coords.latitude+','+coords.longitude+',15z" target="_blank" rel="noopener">Abrir en maps</a></b> </ul> ');
+
+    };
+    const error=(err)=>{
+        console.log(err);
+    };
+
+    navigator.geolocation.getCurrentPosition(success , error , options);
+}
